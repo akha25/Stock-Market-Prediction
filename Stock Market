@@ -1,0 +1,23 @@
+!pip install gradio --quiet
+
+
+def predict_stock_price(input_file="/content/sandp500-metadata.json"):
+    # Preprocess input_date
+    # Run through model
+    # Return prediction
+    return predicted_price
+    # Return prediction
+    return predicted_price
+
+
+import gradio as gr
+
+interface = gr.Interface(
+    fn=predict_stock_price,
+    inputs=gr.Textbox(label="Enter Date (YYYY-MM-DD)"),
+    outputs=gr.Textbox(label="Predicted Stock Price"),
+    title="S&P 500 Stock Price Predictor",
+    description="Enter a date and get the LSTM model's prediction."
+)
+
+interface.launch()
